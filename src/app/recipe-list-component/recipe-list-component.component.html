@@ -1,0 +1,57 @@
+<p>recipe-list-component works!</p>
+<ng-container *ngIf="recipeList">
+    <table class="table table-bordered">
+        <caption>Table</caption>
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">ingredients</th>
+                <th scope="col">instructions</th>
+                <th scope="col">prepTimeMinutes</th>
+                <th scope="col">cookTimeMinutes</th>
+                <th scope="col">servings</th>
+                <th scope="col">difficulty</th>
+                <th scope="col">cuisine</th>
+                <th scope="col">caloriesPerServing</th>
+                <th scope="col">tags</th>
+                <th scope="col">userId</th>
+                <th scope="col">image</th>
+                <th scope="col">rating</th>
+                <th scope="col">reviewCount</th>
+                <th scope="col">mealType</th>
+                <th scope="col">isFavorite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let recipe of recipeList">
+                <th scope="row">{{recipe.id}}</th>
+                <td>{{recipe.name}}</td>
+                <td>{{recipe.ingredients}}</td>
+                <td>{{recipe.instructions}}</td>
+                <td>{{recipe.prepTimeMinutes}}</td>
+                <td>{{recipe.cookTimeMinutes}}</td>
+                <td>{{recipe.servings}}</td>
+                <td>{{recipe.difficulty}}</td>
+                <td>{{recipe.cuisine}}</td>
+                <td>{{recipe.caloriesPerServing}}</td>
+                <td>{{recipe.tags}}</td>
+                <td>{{recipe.userId}}</td>
+                <td>{{recipe.image}}</td>
+                <td>{{recipe.rating}}</td>
+                <td>{{recipe.reviewCount}}</td>
+                <td>{{recipe.mealType}}</td>
+                <td>{{recipe.isFavorite}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+<ng-template *ngIf="!recipeList.length">
+    <div class="alert alert-danger" role="alert">
+        NO HAY PRODUCTOS
+    </div>
+</ng-template>
+
+<app-recipe-form-component>
+
+</app-recipe-form-component>

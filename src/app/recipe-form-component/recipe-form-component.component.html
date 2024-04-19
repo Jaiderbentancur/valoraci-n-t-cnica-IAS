@@ -1,0 +1,15 @@
+<form [formGroup]="recipeForm" (ngSubmit)="recipeFormSubmit(recipeForm)">
+    <div class="mb-3">
+      <label for="nameImput" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nameImput" formControlName="name" placeholder="Your name">
+    </div>
+    <div class="mb-3">
+      <label for="ingredientsImput" class="form-label">Ingredientes</label>
+      <input type="text" class="form-control" id="ingredientsImput" formControlName="ingredients" placeholder="Ingredientes separados por , (coma)">
+    </div>
+    <!-- <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
